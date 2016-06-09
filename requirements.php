@@ -36,15 +36,6 @@ if (extension_loaded('imagick')) {
     }
 }
 
-if (extension_loaded('gd')) {
-    $gdInfo = gd_info();
-    if (!empty($gdInfo['FreeType Support'])) {
-        $gdOK = true;
-    } else {
-        $gdMemo = 'GD extension should be installed with FreeType support in order to be used for image CAPTCHA.';
-    }
-}
-
 /**
  * Adjust requirements according to your application specifics.
  */
